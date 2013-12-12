@@ -11,14 +11,14 @@
 
 @interface ACSecondViewController : UIViewController <UITextFieldDelegate>{
     
-    IBOutlet UITextField *_nameTxtField;
-    IBOutlet UITextField *_addressTxtField;
-    IBOutlet UITextField *_cityTxtField;
-    IBOutlet UITextField *_zipTxtField;
-    IBOutlet UITextField *_phnTxtField;
-    UITextField *_currentTxtField;
+    IBOutlet UITextField * __weak _nameTxtField;
+    IBOutlet UITextField * __weak _addressTxtField;
+    IBOutlet UITextField * __weak _cityTxtField;
+    IBOutlet UITextField * __weak _zipTxtField;
+    IBOutlet UITextField * __weak _phnTxtField;
+    UITextField * __weak _currentTxtField;
     
-    IBOutlet UIButton *_uploadBtn;
+    IBOutlet UIButton * __weak _uploadBtn;
     NSMutableDictionary *_postDict;
     ACAppDelegate *_appDelegate;
 }
