@@ -12,7 +12,7 @@
 @interface ACFirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>{
     NSArray *_venues;
     ACAppDelegate *_appDelegate;
-    IBOutlet UITableView *_tableView;
+    IBOutlet UITableView * __weak _tableView;
 }
 
 - (void) fetchFSData;
