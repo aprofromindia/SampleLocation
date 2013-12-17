@@ -15,6 +15,6 @@
 
 @property (strong, nonatomic) CLLocation *lastLocation;
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) NSString *FSAuthTokenedPostURL;
+@property (copy, nonatomic) NSString *FSAuthTokenedPostURL;
 
 @end
