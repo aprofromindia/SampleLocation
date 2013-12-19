@@ -41,6 +41,8 @@
 		AB13788A18570121009EDAAC /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = AB13788018570121009EDAAC /* UIImageView+AFNetworking.m */; };
 		AB13788B18570121009EDAAC /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = AB13788318570121009EDAAC /* UIProgressView+AFNetworking.m */; };
 		AB13788C18570121009EDAAC /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = AB13788518570121009EDAAC /* UIWebView+AFNetworking.m */; };
+		ABDDAB8B185F31E90045881A /* ACDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDDAB8A185F31E90045881A /* ACDetailViewController.m */; };
+		ABDDAB8E186322EC0045881A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDDAB8C18631DE10045881A /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,9 @@
 		AB13788318570121009EDAAC /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
 		AB13788418570121009EDAAC /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		AB13788518570121009EDAAC /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		ABDDAB89185F31E90045881A /* ACDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACDetailViewController.h; sourceTree = "<group>"; };
+		ABDDAB8A185F31E90045881A /* ACDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACDetailViewController.m; sourceTree = "<group>"; };
+		ABDDAB8C18631DE10045881A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABDDAB8E186322EC0045881A /* MapKit.framework in Frameworks */,
 				AB1377BA185349DE009EDAAC /* CoreGraphics.framework in Frameworks */,
 				AB1377BC185349DE009EDAAC /* UIKit.framework in Frameworks */,
 				AB1377B8185349DE009EDAAC /* Foundation.framework in Frameworks */,
@@ -166,6 +172,7 @@
 		AB1377B6185349DE009EDAAC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ABDDAB8C18631DE10045881A /* MapKit.framework */,
 				AB1377EF18534B00009EDAAC /* CoreLocation.framework */,
 				AB1377B7185349DE009EDAAC /* Foundation.framework */,
 				AB1377B9185349DE009EDAAC /* CoreGraphics.framework */,
@@ -178,6 +185,8 @@
 		AB1377BD185349DE009EDAAC /* SampleLocation */ = {
 			isa = PBXGroup;
 			children = (
+				ABDDAB89185F31E90045881A /* ACDetailViewController.h */,
+				ABDDAB8A185F31E90045881A /* ACDetailViewController.m */,
 				AB13782818566A47009EDAAC /* Constants.h */,
 				AB1377C6185349DE009EDAAC /* ACAppDelegate.h */,
 				AB1377C7185349DE009EDAAC /* ACAppDelegate.m */,
@@ -396,6 +405,7 @@
 				AB13788918570121009EDAAC /* UIButton+AFNetworking.m in Sources */,
 				AB13788A18570121009EDAAC /* UIImageView+AFNetworking.m in Sources */,
 				AB1377D1185349DE009EDAAC /* ACSecondViewController.m in Sources */,
+				ABDDAB8B185F31E90045881A /* ACDetailViewController.m in Sources */,
 				AB1377C4185349DE009EDAAC /* main.m in Sources */,
 				AB13788818570121009EDAAC /* UIAlertView+AFNetworking.m in Sources */,
 				AB13788C18570121009EDAAC /* UIWebView+AFNetworking.m in Sources */,

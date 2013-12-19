@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "AFNetworkActivityIndicatorManager.h"
 #import "ACAppDelegate.h"
+#import "ACDetailViewController.h"
 
 
 @interface ACFirstViewController ()
@@ -48,9 +49,16 @@
     return [_venues count];
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([segue.identifier isEqualToString:@"DetailSegue"]) {
+        ACDetailViewController *detailVC = (ACDetailViewController *) segue.destinationViewController;
+        detailVC.displayDict = [_venues objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
+    }
 }
+
+
 
 
 // Fetch FS data
@@ -68,7 +76,7 @@
             _venues = [[responseObject objectForKey:@"response"] objectForKey:@"venues"];
             
         }
-        [_tableView reloadData];
+        [self.tableView reloadData];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         

@@ -9,10 +9,9 @@
 #import <UIKit/UIKit.h>
 @class ACAppDelegate;
 
-@interface ACFirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>{
+@interface ACFirstViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>{
     NSArray *_venues;
     ACAppDelegate *_appDelegate;
-    IBOutlet UITableView * __weak _tableView;
 }
 
 - (void) fetchFSData;
