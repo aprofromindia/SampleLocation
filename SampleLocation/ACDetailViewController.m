@@ -7,6 +7,7 @@
 //
 
 #import "ACDetailViewController.h"
+@import MapKit.MKMapItem;
 
 @interface ACDetailViewController ()
 
@@ -28,9 +29,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    _nameLabel.text = [_displayDict objectForKey:@"name"];
-    _contactLabel.text = [_displayDict objectForKey:@""];
-    [_verifiedSwitch setSelected:[_displayDict objectForKey:@"verified"]];
+    _nameLabel.text = _displayDict[@"name"];
+    _contactLabel.text = _displayDict [@""];
+    [_verifiedSwitch setSelected:[_displayDict[@"verified"] boolValue]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,5 +40,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)mapBtnPressed{
+    
+    Class mapItemClass = [MKMapItem class];
+    
+    if (mapItemClass && [mapItemClass respondsToSelector:@selector(openMapsWithItems:launchOptions:)]) {
+        
+        
+        MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:nil];
+        mapItem.name = _displayDict[@"name"];
+        [mapItem openInMapsWithLaunchOptions:nil];
+    }
+}
 
 @end

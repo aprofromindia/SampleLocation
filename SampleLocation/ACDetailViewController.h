@@ -14,9 +14,10 @@
     IBOutlet UILabel * __weak _contactLabel;
     IBOutlet UILabel * __weak _ratingLabel;
     IBOutlet UISwitch * __weak _verifiedSwitch;
-    IBOutlet MKMapView * __weak _mapView;
 }
 
 @property (nonatomic, copy) NSDictionary *displayDict;
+
+- (IBAction)mapBtnPressed;
 
 @end

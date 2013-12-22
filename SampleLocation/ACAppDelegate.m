@@ -18,6 +18,7 @@
     _locMgr = [[CLLocationManager alloc] init];
     _locMgr.delegate = self;
     _locMgr.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    _locMgr.distanceFilter = kGPSDistanceFilter;
     return YES;
 }
 							
@@ -31,7 +32,11 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    [_locMgr stopUpdatingLocation];
+    if ([CLLocationManager locationServicesEnabled]) {
+        [_locMgr stopUpdatingLocation];
+    }else{
+        [[[UIAlertView alloc] initWithTitle:@"Location service error" message:@"Please enable location services from system settings." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+    }
     
 }
 

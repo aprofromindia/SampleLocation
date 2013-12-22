@@ -15,3 +15,4 @@
 #define kFSClientSecret @"RH0YMUKU1PBFNFHCCIPTO2RB0KTU2VS0CSHUMEVOZ4QT1NRU"
 #define kFSRedirectURI @"sampleLocation://foursquare"
 #define kNumOfFields 5 + 1
+#define kGPSDistanceFilter 5
