@@ -47,8 +47,16 @@
     
     if (mapItemClass && [mapItemClass respondsToSelector:@selector(openMapsWithItems:launchOptions:)]) {
         
+        NSDictionary *location = _displayDict[@"location"];
+        CLLocationCoordinate2D locationCoord;
         
-        MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:nil];
+        if (location) {
+            locationCoord.latitude = [location[@"lat"] doubleValue];
+            locationCoord.longitude = [location[@"lng"] doubleValue];
+        }
+        
+        MKPlacemark *placeMark = [[MKPlacemark alloc] initWithCoordinate:locationCoord addressDictionary:nil];
+        MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placeMark];
         mapItem.name = _displayDict[@"name"];
         [mapItem openInMapsWithLaunchOptions:nil];
     }

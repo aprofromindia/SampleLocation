@@ -17,7 +17,7 @@
     // Override point for customization after application launch.
     _locMgr = [[CLLocationManager alloc] init];
     _locMgr.delegate = self;
-    _locMgr.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    _locMgr.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
     _locMgr.distanceFilter = kGPSDistanceFilter;
     return YES;
 }
