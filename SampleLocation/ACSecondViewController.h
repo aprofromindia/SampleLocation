@@ -11,6 +11,7 @@
 
 @interface ACSecondViewController : UIViewController <UITextFieldDelegate>{
     
+    // weak text field references.
     IBOutlet UITextField * __weak _nameTxtField;
     IBOutlet UITextField * __weak _addressTxtField;
     IBOutlet UITextField * __weak _cityTxtField;
@@ -19,12 +20,15 @@
     UITextField * __weak _currentTxtField;
     
     IBOutlet UIButton * __weak _uploadBtn;
+    
+    // Post Dict for creating Venues.
     NSMutableDictionary *_postDict;
+    
     ACAppDelegate *_appDelegate;
 }
 
+// upload button action.
 - (IBAction) uploadBtnPressed;
-- (IBAction) nameFieldUpdated:(id)sender;
-- (void) updatePostLocParam;
+
 
 @end

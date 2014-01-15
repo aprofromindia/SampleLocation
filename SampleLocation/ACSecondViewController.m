@@ -15,6 +15,12 @@
 
 @interface ACSecondViewController ()
 
+//method to detect when nameField is updated.
+- (IBAction) nameFieldUpdated:(id)sender;
+
+// method that sets Post location param.
+- (void) updatePostLocParam;
+
 @end
 
 @implementation ACSecondViewController

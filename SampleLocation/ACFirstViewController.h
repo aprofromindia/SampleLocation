@@ -10,10 +10,13 @@
 @class ACAppDelegate;
 
 @interface ACFirstViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>{
+    // list of venues.
     NSArray *_venues;
+    
     ACAppDelegate *_appDelegate;
 }
 
+// function used to fetch 4SQ data.
 - (void) fetchFSData;
 
 @end
