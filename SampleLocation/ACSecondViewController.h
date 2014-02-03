@@ -11,7 +11,6 @@
 
 @interface ACSecondViewController : UIViewController <UITextFieldDelegate>{
     
-    // weak text field references.
     IBOutlet UITextField * __weak _nameTxtField;
     IBOutlet UITextField * __weak _addressTxtField;
     IBOutlet UITextField * __weak _cityTxtField;
@@ -21,7 +20,7 @@
     
     IBOutlet UIButton * __weak _uploadBtn;
     
-    // Post Dict for creating Venues.
+    // Post Dict for creating venue in 4SQ.
     NSMutableDictionary *_postDict;
     
     ACAppDelegate *_appDelegate;

@@ -10,9 +10,11 @@
 @import CoreLocation;
 
 @interface ACAppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate>{
+    
+    //application location manager.
     CLLocationManager * _locMgr;
 }
-// users last location.
+// users last fetched location.
 @property (strong, nonatomic) CLLocation *lastLocation;
 
 @property (strong, nonatomic) UIWindow *window;

@@ -16,7 +16,7 @@
     ACAppDelegate *_appDelegate;
 }
 
-// function used to fetch 4SQ data.
+// function used to fetch list of venues from 4SQ.
 - (void) fetchFSData;
 
 @end

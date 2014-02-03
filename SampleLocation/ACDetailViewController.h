@@ -11,16 +11,16 @@
 
 @interface ACDetailViewController : UIViewController <MKMapViewDelegate>{
     
-    // View labels
     IBOutlet UILabel * __weak _nameLabel;
     IBOutlet UILabel * __weak _contactLabel;
     IBOutlet UILabel * __weak _ratingLabel;
     IBOutlet UISwitch * __weak _verifiedSwitch;
 }
 
-// Dictionary used to store all display values.
+// KV store used to store all displayed values.
 @property (nonatomic, copy) NSDictionary *displayDict;
 
+//Button action to show map view with item.
 - (IBAction)mapBtnPressed;
 
 @end
